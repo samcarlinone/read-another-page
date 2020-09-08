@@ -1,0 +1,23 @@
+{
+  "name": "read-another-page",
+  "version": "1.0.0",
+  "description": "A best-of booklist.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --port 8000",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam Carlin",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "parcel-plugin-asset-copier": "^1.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-jss": "^10.4.0",
+    "react-router-dom": "^5.2.0",
+    "theming": "^3.3.0"
+  },
+  "assetsPath": "src/assets"
+}
