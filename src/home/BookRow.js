@@ -27,15 +27,16 @@ const useStyles = createUseStyles({
   },
   divider: {
     marginBottom: 8,
+    marginRight: 28,
   },
 })
 
-const Home = ({books}) => {
+const Home = ({name, books}) => {
   const classes = useStyles()
 
   return (
     <div className={classes.scrollContainer}>
-      <Header text="Recommended" className={classes.title} />
+      <Header text={name} className={classes.title} />
       <div className={classes.contentContainer}>
         <Divider className={classes.divider} />
         <div className={classes.cardContainer}>

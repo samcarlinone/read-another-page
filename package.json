@@ -11,6 +11,7 @@
   "author": "Sam Carlin",
   "license": "ISC",
   "dependencies": {
+    "@svgr/parcel-plugin-svgr": "^5.4.0",
     "classnames": "^2.2.6",
     "parcel-plugin-asset-copier": "^1.1.0",
     "react": "^16.13.1",

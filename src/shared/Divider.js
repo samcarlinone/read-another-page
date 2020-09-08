@@ -5,7 +5,7 @@ import classNames from 'classnames';
 const useStyles = createUseStyles({
   line: {
     height: 2,
-    background: 'linear-gradient(to right, #c51111, transparent)', 
+    background: 'linear-gradient(to right, #c51111 0%, #c51111 90%, transparent 100%)', 
   },
 });
 
