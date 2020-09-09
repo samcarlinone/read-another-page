@@ -19,5 +19,8 @@
     "react-router-dom": "^5.2.0",
     "theming": "^3.3.0"
   },
-  "assetsPath": "src/assets"
+  "assetsPath": "src/assets",
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  }
 }
