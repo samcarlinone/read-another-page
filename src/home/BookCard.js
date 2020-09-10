@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { createUseStyles } from 'react-jss'
 import classNames from 'classnames/bind'
 import { AgeRating } from '../shared'
+import { useHistory } from 'react-router-dom'
 
 const useStyles = createUseStyles(theme => ({
   container: {
+    cursor: 'pointer',
+
     borderRadius: 4,
     border: '1px solid #aaa',
     backgroundColor: 'white',
@@ -37,7 +40,6 @@ const useStyles = createUseStyles(theme => ({
   title: {
     fontSize: 28,
     fontFamily: theme.fonts.patuaOne,
-
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
@@ -89,11 +91,14 @@ const useStyles = createUseStyles(theme => ({
 
 const BookCard = ({book}) => {
   const classes = useStyles()
+  const history = useHistory()
 
   const {title, author, genre, slug, imgAdjust, ageRating, recommendationLevel} = book
 
+  const handleClick = useCallback(() => history.push(`/details/${slug}`))
+
   return (
-    <div className={classes.container}>
+    <div className={classes.container} onClick={handleClick}>
       <div className={classes.imageContainer}>
         <img
           className={classes.image}

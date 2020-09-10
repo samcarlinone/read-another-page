@@ -2,14 +2,17 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { ThemeProvider } from 'theming'
-import { Home, AppBar } from './src/home'
+import { Home } from './src/home'
 import theme from './src/styles/theme'
+import { DetailView } from './src/details'
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <AppBar />
     <Router>
       <Switch>
+        <Route path="/details/:slug">
+          <DetailView />
+        </Route>
         <Route path="/">
           <Home />
         </Route>
