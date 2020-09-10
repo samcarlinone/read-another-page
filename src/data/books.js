@@ -2,9 +2,9 @@ import ageRatings from './ageRatings'
 import genres from './genres'
 
 const sciFi = [
-  {title: 'H.I.V.E.', author: 'Mark Walden', recommendationLevel: 3, slug: 'hive', imgAdjust: 14, ageRating: {age: ageRatings.TEEN}},
+  {title: 'H.I.V.E.', author: 'Mark Walden', recommendationLevel: 3, slug: 'hive', ageRating: {age: ageRatings.TEEN}},
   {title: 'Ancillary Justice', author: 'Ann Leckie', recommendationLevel: 2, slug: 'ancillary-justice', ageRating: {age: ageRatings.ADULT, aimedAt: true}},
-  {title: 'Leviathan Wakes', author: 'James S. A. Corey', recommendationLevel: 3, slug: 'leviathan-wakes', imgAdjust: 32, ageRating: {age: ageRatings.ADULT}},
+  {title: 'Leviathan Wakes', author: 'James S. A. Corey', recommendationLevel: 3, slug: 'leviathan-wakes', ageRating: {age: ageRatings.ADULT}},
 ]
 
 const fantasy = [

@@ -19,9 +19,7 @@ const useStyles = createUseStyles(theme => ({
     position: 'relative',
 
     marginRight: 16,
-  },
-  crosshairs: {
-
+    marginBottom: 8,
   },
   icon: {
     border: '2px solid #888',
@@ -40,8 +38,11 @@ const useStyles = createUseStyles(theme => ({
     fontFamily: theme.fonts.raleway,
     fontSize: 40,
     position: 'absolute',
-    bottom: -6,
-    right: -14,
+    bottom: -18,
+  },
+  text: {
+    backgroundColor: 'white',
+    lineHeight: '24px',
   },
 }))
 
@@ -56,7 +57,7 @@ const AgeRating = ({rating}) => {
 
   return (
     <div className={classes.ageRatingContainer}>
-      {age}
+      <div className={classes.text}>{age}</div>
       {symbol}
     </div>
   )
