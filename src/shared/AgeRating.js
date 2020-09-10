@@ -1,32 +1,25 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import Crosshair from '../icons/Crosshair'
+import Plus from '../icons/Plus'
 
 const useStyles = createUseStyles(theme => ({
   ageRatingContainer: {
-    border: '2px solid #888',
-    borderRadius: '50%',
-
-    width: 36,
-    height: 36,
-
-    fontFamily: theme.fonts.patuaOne,
-    fontSize: 24,
+    fontFamily: theme.fonts.raleway,
+    fontWeight: 700,
+    fontSize: 20,
 
     display: 'flex',
-    justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
-
-    marginRight: 16,
-    marginBottom: 8,
+    zIndex: 0,
   },
   icon: {
     border: '2px solid #888',
     borderRadius: '50%',
 
-    width: 20,
-    height: 20,
+    width: 16,
+    height: 16,
 
     display: 'flex',
     justifyContent: 'center',
@@ -34,15 +27,23 @@ const useStyles = createUseStyles(theme => ({
     
     color: '#c51111',
     backgroundColor: 'white',
-    
-    fontFamily: theme.fonts.raleway,
-    fontSize: 40,
-    position: 'absolute',
-    bottom: -18,
   },
   text: {
     backgroundColor: 'white',
-    lineHeight: '24px',
+    lineHeight: '20px',
+
+    marginRight: 4,
+  },
+  textBackground: {
+    border: '2px solid #888',
+    borderRadius: '50%',
+
+    width: 24,
+    height: 24,
+    
+    position: 'absolute',
+    right: 12,
+    zIndex: -1,
   },
 }))
 
@@ -53,10 +54,11 @@ const AgeRating = ({rating}) => {
 
   const symbol = aimedAt
     ? <div className={classes.icon}><Crosshair /></div>
-    : <div className={classes.icon}>+</div>
+    : <div className={classes.icon}><Plus /></div>
 
   return (
     <div className={classes.ageRatingContainer}>
+      <div className={classes.textBackground} />
       <div className={classes.text}>{age}</div>
       {symbol}
     </div>
