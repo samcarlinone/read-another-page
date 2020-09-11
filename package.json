@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html --port 8000",
-    "build": "npm run parcelBuild && npm run prepImages",
+    "build": "rimraf dist && npm run parcelBuild && npm run prepImages",
     "parcelBuild": "parcel build index.html",
     "prepImages": "node scripts/prep_images.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +24,7 @@
   "devDependencies": {
     "cssnano": "^4.1.10",
     "glob": "^7.1.6",
+    "rimraf": "^3.0.2",
     "sharp": "^0.26.0"
   },
   "assetsPath": "src/assets"
