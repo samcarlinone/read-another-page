@@ -60,15 +60,19 @@ const useStyles = createUseStyles(theme => ({
     color: '#FFF !important',
 
     padding: 8,
+    paddingRight: 12,
     height: '1.5rem',
     borderRadius: 'calc(1.5rem + 8px)',
 
     margin: [8, 0],
     display: 'block',
+
+    boxShadow: theme.shadows[2],
   },
   linkIcon: {
-    display: 'inline-block',
-    textAlign: 'center',
+    display: 'inline-flex',
+    justifyContent: 'center',
+    alignContent: 'center',
     width: 24,
     height: 24,
     borderRadius: '50%',
@@ -77,6 +81,14 @@ const useStyles = createUseStyles(theme => ({
     backgroundColor: '#FFF',
 
     marginRight: 8,
+  },
+  goodreads: {
+    position: 'relative',
+    top: -3,
+
+    fontFamily: theme.fonts.patuaOne,
+    fontSize: 22,
+    lineHeight: '22px',
   },
 }))
 
@@ -112,7 +124,9 @@ const DetailView = () => {
               className={classes.link}
               target="_blank"
             >
-              <span className={classes.linkIcon}>g</span>
+              <div className={classes.linkIcon}>
+                <div className={classes.goodreads}>g</div>
+              </div>
               Goodreads
             </a>
           </div>

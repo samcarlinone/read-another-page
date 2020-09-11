@@ -80,16 +80,16 @@ const BookCard = ({book}) => {
   const handleClick = useCallback(() => history.push(`/details/${slug}`))
 
   return (
-    <div className={classes.container} onClick={handleClick}>
+    <div className={classes.container} onClick={handleClick} onKeyUp={e => e.keyCode === 13 && handleClick()} tabIndex={0}>
       <div className={classes.imageContainer}>
         <picture className={classes.image}>
-          <source srcSet={SCALES.map(scale => `images/${slug}-cover-${scale}x.webp ${scale}x`).join(', ')} type="image/webp" />
-          <source srcSet={SCALES.map(scale => `images/${slug}-cover-${scale}x.jpg ${scale}x`).join(', ')} type="image/jpeg" />
+          <source srcSet={SCALES.map(scale => `/images/${slug}-cover-${scale}x.webp ${scale}x`).join(', ')} type="image/webp" />
+          <source srcSet={SCALES.map(scale => `/images/${slug}-cover-${scale}x.jpg ${scale}x`).join(', ')} type="image/jpeg" />
           <img
             width={WIDTH}
             height={IMAGE_HEIGHT}
             className={classes.image}
-            src={`images/${slug}-cover-1x.jpg`}
+            src={`/images/${slug}-cover-1x.jpg`}
             alt={`Cover for ${title}`}
             decoding="async"
             loading="lazy"
