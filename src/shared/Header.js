@@ -5,7 +5,7 @@ import classNames from 'classnames/bind'
 const useStyles = createUseStyles(theme => ({
   header: {
     fontFamily: theme.fonts.patuaOne,
-    fontSize: 32,
+    fontSize: '2rem',
   },
 }));
 

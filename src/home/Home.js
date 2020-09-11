@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <>
-      <AppBar />
+      <AppBar>Read Another Page</AppBar>
       <BookRow books={books} name="Top Recommended" />
       <BookRow books={books.filter(book => book.genre === genres.SCIFI)} name="Science Fiction" />
     </>

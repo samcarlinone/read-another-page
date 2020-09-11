@@ -7,7 +7,7 @@ const useStyles = createUseStyles(theme => ({
   ageRatingContainer: {
     fontFamily: theme.fonts.raleway,
     fontWeight: 700,
-    fontSize: 20,
+    fontSize: '1.25rem',
 
     display: 'flex',
     alignItems: 'center',
@@ -50,7 +50,7 @@ const useStyles = createUseStyles(theme => ({
 const AgeRating = ({rating}) => {
   const classes = useStyles()
 
-  const {age, aimedAt} = rating
+  const { age, aimedAt } = rating
 
   const symbol = aimedAt
     ? <div className={classes.icon}><Crosshair /></div>

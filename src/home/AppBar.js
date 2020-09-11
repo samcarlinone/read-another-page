@@ -1,24 +1,30 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import classNames from 'classnames'
 
 const useStyles = createUseStyles(theme => ({
   header: {
     fontFamily: theme.fonts.patuaOne,
-    fontSize: 40,
+    fontSize: '2.5rem',
     lineHeight: '40px',
-    padding: 8,
+
+    height: theme.appBarHeight,
+    boxSizing: 'border-box',
+    display: 'flex',
+    alignItems: 'center',
     paddingLeft: 16,
+
     backgroundColor: 'white',
-    borderBottom: '1px solid #aaa',
+    borderBottom: theme.border,
   },
 }))
 
-const Header = () => {
+const Header = ({children, className}) => {
   const classes = useStyles()
 
   return (
-    <div className={classes.header}>
-      Read Another Page
+    <div className={classNames(classes.header, className)}>
+      {children}
     </div>
   )
 }
