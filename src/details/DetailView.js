@@ -90,6 +90,23 @@ const useStyles = createUseStyles(theme => ({
     fontSize: 22,
     lineHeight: '22px',
   },
+  recommendationContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  recommendationLevel: {
+    color: theme.colors.accent,
+    fontFamily: theme.fonts.patuaOne,
+    fontSize: '3rem',
+
+    paddingRight: 8,
+    marginRight: 8,
+    borderRight: `2px solid ${theme.colors.accent}`,
+  },
+  recommendationTitle: {
+    fontFamily: theme.fonts.raleway,
+    fontSize: '1.25rem',
+  },
 }))
 
 const DetailView = () => {
@@ -116,6 +133,10 @@ const DetailView = () => {
           </div>
           <div className={classes.card}>
             <div className={classes.description}>{description}</div>
+          </div>
+          <div className={classNames(classes.card, classes.recommendationContainer)}>
+            <div className={classes.recommendationLevel}>{book.recommendationLevel}</div>
+            <div className={classes.recommendationTitle}>Recommendation<br />Level</div>
           </div>
           <div className={classes.card}>
             <div className={classes.linksTitle}>Links</div>
