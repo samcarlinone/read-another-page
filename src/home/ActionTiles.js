@@ -43,8 +43,8 @@ const ActionTiles = ({children}) => {
   const tiles = [
     {icon: '🧭', label: 'Browse Genres', link: '/browse'},
     {icon: '🔍', label: 'Search', link: '/search'},
-    {icon: '📣', label: 'Give Feedback', link: '/feedback'},
-    {icon: '📮', label: 'Suggest a Title', link: '/suggest'},
+    {icon: '📣', label: 'Give Feedback', link: 'https://forms.gle/hXPxqNvdv8fUhWAw7'},
+    {icon: '📮', label: 'Suggest a Book', link: 'https://forms.gle/MzKaX4SYt5hjBdxL8'},
     {icon: '📖', label: 'About Us', link: '/about'},
   ]
 
@@ -52,7 +52,13 @@ const ActionTiles = ({children}) => {
     <div className={classes.scrollContainer}>
       <div className={classes.container}>
         {tiles.map(tile => (
-          <div className={classes.tile} tabIndex={0} onClick={() => history.push(tile.link)} onKeyUp={e => e.keyCode === 13 && history.push(tile.link)}>
+          <div
+            key={tile.label}
+            className={classes.tile}
+            tabIndex={0}
+            onClick={() => tile.link.includes('http') ? window.open(tile.link) : history.push(tile.link)}
+            onKeyUp={e => e.key === 'Enter' && (tile.link.includes('http') ? window.open(tile.link) : history.push(tile.link))}
+          >
             {tile.icon}
             <div className={classes.tileLabel}>{tile.label}</div>
           </div>
