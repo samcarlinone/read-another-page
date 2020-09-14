@@ -8,6 +8,7 @@ export default {
   },
   border: '1px solid #aaa',
   colors: {
+    text: 'rgba(0, 0, 0, 0.87)',
     accent: '#C51111',
   },
   imageBackgroundObject: {

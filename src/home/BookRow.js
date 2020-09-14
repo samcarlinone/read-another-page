@@ -6,7 +6,8 @@ import { Divider, Header } from '../shared'
 const useStyles = createUseStyles({
   scrollContainer: {
     width: '100vw',
-    padding: 16,
+    padding: [0, 16],
+    margin: [16, 0],
     overflowX: 'auto',
     boxSizing: 'border-box',
   },

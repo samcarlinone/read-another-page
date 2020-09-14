@@ -7,6 +7,7 @@ import theme from './src/styles/theme'
 import { Home } from './src/home'
 import { DetailView } from './src/details'
 import { NotFound } from './src/not-found'
+import { ListGenres } from './src/genres'
 
 console.log(NotFound)
 
@@ -17,9 +18,15 @@ const App = () => (
         <Route path="/details/:slug">
           <DetailView />
         </Route>
+
+        <Route path="/genres" exact>
+          <ListGenres />
+        </Route>
+
         <Route path="/" exact>
           <Home />
         </Route>
+
         <Route>
           <NotFound />
         </Route>
